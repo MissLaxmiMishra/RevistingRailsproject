@@ -1,0 +1,17 @@
+<h1><%= @home.Name %></h1>
+
+<p><%= @home.Contact_No %></p>
+<p><%= @home.Description %></p>
+
+
+<ul>
+  <li><%= link_to "Edit", edit_home_path(@home) %></li>
+  <li><%= button_to "Destroy", home_path(@home), method: :delete,
+  data: { confirm: "Are you sure?" } %></li>
+</ul>
+
+<h2>Comments</h2>
+<%= render @home.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>

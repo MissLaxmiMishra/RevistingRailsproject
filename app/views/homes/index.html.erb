@@ -1,1 +1,12 @@
-<h1>Hello</h1>
+<h1>Home</h1>
+<ul>
+  <% @homes.each do |home| %>
+    <li><%=link_to home.Name, home %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "New Home", new_home_path %>
+
+
+
+
